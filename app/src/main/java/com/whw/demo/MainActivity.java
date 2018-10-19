@@ -1,5 +1,6 @@
 package com.whw.demo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -11,7 +12,7 @@ import java.util.List;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+
+        Intent intent = new Intent(this, VideoLivingActivity.class);
+        startActivity(intent);
     }
 
 }
